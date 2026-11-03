@@ -1,0 +1,27 @@
+# Выгрузки из игр — никогда не коммитим
+/data/
+*.bdt
+*.bhd
+*.dcx
+regulation.bin
+
+# Секреты
+.env
+.env.*
+!.env.example
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Системное
+.DS_Store
+Thumbs.db
