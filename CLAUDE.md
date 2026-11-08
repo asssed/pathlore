@@ -51,11 +51,25 @@ Next.js (React, TypeScript) · Leaflet (карта, `CRS.Simple`) · PostgreSQL 
 ## 7. Окружение (ПК Тима)
 - Windows 11, PowerShell 5.1 (нет `&&` — используйте `;`), VS Code установлен.
 - Python 3.14: `C:\Users\timkr\AppData\Local\Programs\Python\Python314\python.exe` (+ pillow, numpy).
-- На 8 ноября 2026 **не установлены**: Git, Node.js, Docker, PostgreSQL — см. этап 0.
+- Git 2.56 и Node.js 26 LTS (npm 11) установлены 2026-11-08; Docker и PostgreSQL — пока нет (этап 0).
+  В новой консоли PATH уже содержит git/node; в уже открытом процессе обновить:
+  `$env:Path = [Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [Environment]::GetEnvironmentVariable('Path','User')`.
 - Elden Ring на ПК есть; Shadow of the Erdtree купить до 13 декабря 2026.
 - Тим живёт в ОАЭ, работает как самозанятый в РФ (НПД).
 
-## 8. Соглашения
+## 8. Команды (из корня репозитория)
+| команда | что делает |
+|---|---|
+| `npm install` | зависимости всех пакетов (npm workspaces) |
+| `npm run dev` | сайт в режиме разработки → http://localhost:3000 |
+| `npm run build` | продакшн-сборка (проверка перед коммитом) |
+| `npm run lint` | ESLint |
+
+`apps/web` — Next.js **16** (App Router, Turbopack, Cache Components включены, Tailwind 4). Это новее, чем знания модели:
+перед кодом читать документацию из `apps/web/node_modules/next/dist/docs/` или корневого `node_modules/next/dist/docs/`
+(см. `apps/web/AGENTS.md`). `npm audit`: в продакшн-зависимостях 0 уязвимостей; moderate — только в dev-цепочке ESLint.
+
+## 9. Соглашения
 - Документация и общение — на русском; код, идентификаторы, коммиты — на английском.
 - Даты в документах — абсолютные (`2026-11-08`), не «завтра».
 - Оценки и цены помечать как оценки и указывать, на какую дату они верны.

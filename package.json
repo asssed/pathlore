@@ -1,0 +1,16 @@
+{
+  "name": "pathlore",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @pathlore/web",
+    "build": "npm run build -w @pathlore/web",
+    "start": "npm run start -w @pathlore/web",
+    "lint": "npm run lint -w @pathlore/web"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}
