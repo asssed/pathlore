@@ -1,0 +1,8 @@
+# Единые окончания строк (LF) — сервер на Linux, разработка на Windows
+* text=auto eol=lf
+*.ps1 text eol=crlf
+*.png binary
+*.jpg binary
+*.webp binary
+*.ico binary
+*.woff2 binary
