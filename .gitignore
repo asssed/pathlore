@@ -5,11 +5,13 @@
 *.pem
 *.key
 
-# --- Файлы игр: не распространяем (см. CLAUDE.md §4) ---
+# --- Выгрузки и файлы игр: не коммитим и не распространяем (см. CLAUDE.md §4) ---
+/data/
 gamedata/
 game-dump/
-pipeline/input/
-pipeline/cache/
+pipelines/*/input/
+pipelines/*/cache/
+regulation.bin
 *.bdt
 *.bhd
 *.bhd5
@@ -23,6 +25,7 @@ pipeline/cache/
 node_modules/
 .next/
 out/
+dist/
 .turbo/
 *.tsbuildinfo
 npm-debug.log*
